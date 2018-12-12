@@ -1,0 +1,72 @@
+ssh clone:
+mkdir <repo_name>
+cd <repo_name>
+ssh_keygen -t rsa
+-see path for id_rsa.pub
+cat <path_id_rsa.pub>
+-copy and insert into setting->ssh key in github
+-into <repo_name>
+git clone <path_ssh_from_github>
+
+hhtp->ssh:
+git remote set-url origin <path_ssh_from_github>
+
+git has 3 config:
+1. system
+/etc/gitconfig
+
+2. global
+~/.gitconfig
+or
+~/.config/git/config
+
+3. local
+inside in your local git repository
+.git/config
+
+impotant->unimpotant:
+local->global->system
+
+command:
+
+git config
+-show all parameters
+
+git config --list
+git config --list --system
+git config --list --global
+git config --list --local
+-show config all/system/global/local
+
+git config <key>
+git config --system <key>
+etc
+-show <key> (for example - core.editor)
+
+git config --global core.editor emacs
+-set global editor
+
+files:
+1. nonindexed in local
+2. indexed in local
+3. indexed on server
+
+1 -> 2
+2 -> 3
+3 -> 2
+
+git rm [options] <file>
+https://git-scm.com/docs/git-rm
+
+git diff <index_1> <index_2>
+
+git log --pretty=oneline --abbrev-commit
+return massages and index
+
+
+
+
+----------------------------
+shrink git
+https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery
+https://rtyley.github.io/bfg-repo-cleaner/

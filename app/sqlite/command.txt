@@ -1,0 +1,23 @@
+> sqlite3
+
+open/create db
+> sqlite3 db/chinook.db
+sqlite> .open c:\sqlite\chinook.db
+sqlite> ATTACH DATABASE "c:\sqlite\chinook.db" AS chinook;
+
+sqlite>
+.tables
+.table '%es
+.help
+.database
+.schema albums
+.indexes
+.indexes [table]
+.indexes %es
+
+.exit
+.quit
+.q
+
+sqlite> .output albums.txt
+sqlite> SELECT title FROM albums;

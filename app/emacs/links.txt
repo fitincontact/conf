@@ -1,0 +1,55 @@
+http://muff.kiev.ua/content/tcpip-illyustrirovannyi-uchebnik
+http://plm.mccme.ru/
+--------------------
+foundationdb
+https://www.foundationdb.org/
+https://apple.github.io/foundationdb/tutorials.html
+----------------------
+
+
+https://astaxie.gitbooks.io/build-web-application-with-golang/en/01.4.html
+https://github.com/dominikh/go-mode.el
+https://github.com/craig-ludington/gotags-el
+
+
+https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins
+
+!!!
+http://tleyden.github.io/blog/2014/05/22/configure-emacs-as-a-go-editor-from-scratch/
+
+!!!
+http://reangdblog.blogspot.com/2016/06/emacs-ide-go.html
+
+
+https://caiorss.github.io/Emacs-Elisp-Programming/Keybindings.html
+
+http://ergoemacs.org/emacs/lisp_formatter.html
+https://github.com/tuhdo/semantic-refactor
+
+----------------------------------
+M-x speedbar
+M-x imenu
+C-x 5 2
+M-x-p									command history
+M-x-n									command history
+
+----------------------------------
+;;-diff
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+;(setq ediff-split-window-function 'split-window-vertically)
+(setq ediff-split-window-function 'split-window-horizontally)
+(defun my-diff (switch)
+  (cond ((getenv "EMACS-TEST")
+    (message "=== called from emacs"))
+    )
+  (let ((file1 (pop command-line-args-left))
+        (file2 (pop command-line-args-left)))
+  (ediff-files file1 file2)))
+(add-to-list 'command-switch-alist '("-diff" . my-diff))
+
+;;no-splash
+;;alias emacs='emacs --no-splash'
+(custom-set-variables 
+'(inhibit-startup-screen t)
+'(inhibit-startup-message t)
+)

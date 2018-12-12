@@ -1,0 +1,216 @@
+files, buffers, windows:
+C-x C-f		find-file			Открыть файл на диске
+C-x C-q						read only
+C-x C-s		save-buffer			Сохранить буфер на диске
+C-x C-w		write-file			Сохранить буфер в файле с новым именем
+C-x k						Close file
+C-x C-b		list-buffers			Отобразить список открытых буферов в новом окне
+https://www.gnu.org/software/emacs/manual/html_node/emacs/Several-Buffers.html
+in this window:
+k Flag the buffer for deletion (killing)(the deletion flag is indicated by the character ‘D’)
+x Perform all flagged deletions and saves (Buffer-menu-execute)
+u Remove all flags from the current line
+M-<DEL> Remove a particular flag from all lines
+
+C-x b		switch-to-buffer		Переключиться в другой буфер в текущем окне. C-x b <arrows_up/down> or C-x b <new_name>
+C-x i		insert-file			Вставить содержимое файла в буфер в текущую позицию
+C-x 0		delete-window			Закрыть текущее окно (при этом буфер не удаляется)
+C-x 1		delete-other-windows		Закрыть все окна кроме текущего
+C-x 2		split-window-horizontally	Разделить окно по горизонтали
+C-x 3		split-window-vertically
+C-x 4 0		kill-buffer-and-window		
+C-x o		other-window			Переход в другое окно
+*C-Tab						other-window
+C-x ^		enlarge-window			Make selected window taller
+C-x }		enlarge-window-horizontally 	Make selected window wider
+C-x {		shrink-window-horizontally	Make selected window narrower
+C-x -		shrink-window-if-larger-than-buffer		Shrink this window if its buffer doesn't need so many lines 
+C-x +		balance-windows			Make all windows the same height
+C-x C-c		save-buffers-kill-emacs		Перед выходом из редактора запросить о необходимости сохранения изменённых файлов
+*C-z						undo
+
+dired mode:
+C-x C-f <directory> or C-x d
+^						move to up level in file system
+q						move back in file system
+C-x b RET         move back in file system
+(						linux view
+g						refresh
+
+shell:
+M-x eshell
+M-!
+
+cursor moving:
+*C-up/C-down/M-p/M-n				move window
+C-p		previous-line			Вверх на одну строку
+C-n		next-line			Вниз на строку
+C-f		forward-char			Вперёд на один символ
+C-b		backward-char			Назад на один символ
+C-a		beggining-of-line		Начало строки
+C-e		end-of-line			Конец строки
+C-v		scroll-up			Вниз на одну страницу
+M-v		previous-page			Вверх на одну страницу
+M-f		next-word			Вперёд на одно слово
+M-b		previous-word			Назад на одно слово
+M-<		beginning-of-buffer		В начало буфера
+M->		end-of-buffer			В конец буфера
+C-g		keyboard-quit			Закончить (прервать) текущую операцию
+M-g g 		goto-line			Переход на заданную строку
+M-x		linum-mode			Line numbers
+
+text working:
+C-d		delete-char			Удаление символа перед точкой
+M-d		kill-word			Удалить следующее слово
+C-k		kill-line			Удалить текст до конца строки
+M-k		kill-sentence			Удалить текст до конца предложения
+M-\		delete-horizontal-space		Удалить все пробелы и знаки табуляции вокруг точки
+C-q		quoted-insert			Вставка символа, соответствующего нажатой клавише или сочетанию, даже если это управляющая последовательность
+M-q		fill-paragraph			Выравнивает текст в текущем параграфе
+
+marks & regions:
+C-space		set-mark-command		Установить пометку в точке
+C-@		set-mark-command		Установить пометку в точке
+C-M-space select word
+C-x C-x		exchange-point-and-mark		Поменять местами точку и начало пометки
+C-x h 		mark-whole-buffer		Пометить весь буфер
+C-x w h
+https://www.gnu.org/software/emacs/manual/html_node/emacs/Highlight-Interactively.html
+C-Ins						Copy
+Shift-Del					Cut
+Shift-Ins					Paste
+C-w		kill-region			Удаление выделенной области в список удалений
+M-w		kill-ring-save			Копирование выделенной области в список удалений
+C-y		yank				Вставка текста из списка удалений в текущую позицию
+M-y		yank-pop			Последовательная вставка текста из списка удалений
+C-x x N		copy-to-register		Копировать отмеченный текст в регистр (N может быть буквой или цифрой, позволяя использовать множество регистров)
+C-x g N		insert-register			Вставляет в точку содержимое регистра N
+M-\		indent-region			Выравнивание строк выделенного фрагмента
+TAB						Indent Current Line
+C-M-\						Indent Selection
+*f1						copy all buffer
+/*
+*C-c w						copy word
+*C-c l						copy line
+*C-c p						copy paragraph
+*C-c s						copy string
+*C-c a						copy parenthesis
+*/
+
+find & replace:
+C-s		isearch-forward			Поиск строки вперёд
+C-r		isearch-backward		Поиск строки в обратном направлении
+M-p/M-n						history for isearch
+M-%		query-replace			Поиск и замена с запросом
+M-%!						replace all
+M-x		replace-string			Replace all after point
+M-x		replace-regexp			Поиск и замена с использованием регулярного выражения
+
+help:
+C-h ?		help-for-help			Информация об использовании справочной системы
+C-h t		help-with-tutorial		Использовать интерактивный учебник
+C-h f		describe-function		Показать справку по функции
+C-h v		describe-variable		Показать справку по переменной
+C-h k		describe-key			Показать данные, о том, что делает последовательность клавиш
+C-h a		apropos				Поиск в справке по строке/регулярному выражению
+C-h F		view-emacs-FAQ			Показать Emacs FAQ
+C-h i		info				Показать документацию по Emacs (Info)
+
+SML Process:
+M-x sml						Start SML interpreter
+C-c C-s						Switch to SML interpreter
+C-c C-l						Load a file into SML interpreter
+C-c C-r						Send current selection to SML interpreter
+C-c C-b						Send current buffer to SML interpreter
+C-c `						Browse through source file for next error
+C-c C-d						Tell the interactive session to terminate
+
+etc:
+M-x 		command				Выполнить команду Emacs с именем command
+C-x u		undo				Отменить последнюю операцию
+C-x r m		bookmark-set			Установить закладку. Полезно при поиске
+C-x r b		bookmark-jump			Перейти к закладке
+M-x		customize-themes 		To set a color theme
+C-x C-f ~/.emacs				edit emacs config
+C-u <digit> command				repeat comand DIGIT times
+M-<digit>					like C-u <digit>
+M-x speedbar
+M-x imenu
+C-x 5 2
+M-x-p						command history
+M-x-n						command history
+C-\						change keyboard lang
+Shift-f11					full mode
+*f6						imenu				
+*f7						speedbar
+
+golang:
+*f8						compile
+*f9						gofmt
+M-x go-rename
+M-x go-direx-switch-to-buffer			structure of code
+C-c C-j		M-x godef-jump			перейти к реализации функции под курсором (вернуться назад, можно через M-*)
+C-x 4 C-c C-j	M-x godef-jump-other-window 	аналогично "godef-jump" только открывается в новом окне
+M-x godoc-at-point				покажет документацию по команде под курсором
+C-c C-f i	M-x go-goto-imports		перейти к секции "import" текущего файла
+C-c C-f f	M-x go-goto-function		перейти к началу функции, внутри которой находится курсор
+C-c C-f a	M-x go-goto-arguments		перейти к аргументам текущей функции
+C-c C-f d	M-x go-goto-docstring		перейти к комментариям функции
+C-c C-f r	M-x go-goto-return-values	перейти к описанию возвращаемого значения для функции
+C-M-a		M-x beginning-of-defun		перейти к началу функции
+C-M-e		M-x end-of-defun		перейти к концу функции
+
+language modes:
+M-x sql-mode
+M-x sql-set-product oracle
+M-/		dabbrev-expand			Expand the word in the buffer before point as a dynamic abbrev, by searching for words starting with that abbreviation
+C-M-/		dabbrev-completion		Complete the word before point as a dynamic abbrev
+
+encoding:
+M-x revert-buffer-with-coding-system <encode>
+M-x list-coding-systems
+
+diff in cmd:
+emacs -diff <file_01> <file_02>
+
+bookmarks:
+*f3						create bookmark
+*f4						jump to bookmark
+*f5						list of bookmark
+d						mark boorkmark and ...
+x						delete all bookmarks with mark 'D'
+
+
+http://ergoemacs.org/emacs/emacs_regex.html
+https://www.emacswiki.org/emacs/LineNumbers
+Пакет Emacs Code Browser:
+http://alexott.net/ru/writings/altlinux-emacs/
+http://reangdblog.blogspot.com/2016/06/emacs-ide-go.html
+
+-------------------------------------------------------------------------
+macros
+https://josephhall.org/nqb2/index.php/replace_ctrlms
+Sorry to get all geeky on you, but...
+
+Lately, I've had to do a lot of replacing ^M characters in files and pasted text in emacs. All seasoned emacs users know that this is easily done by doing the following at the beginning of a file:
+
+M-x replace-string RET C-q C-m RET C-q C-j RET
+However, that can get really tiring if you have to do it alot.
+
+I looked for an alias, shortcut or something that would let me do this with fewer keys, but no luck. Finally, I realized that the term I was looking for in my search was a keyboard macro. That is, an emacs keyboard macro can be defined to do this and then I can set a key combination to do it. Here's how:
+
+To start recording a macro type C-x (
+Do the things you want to record in the macro... for example, I typed the key combination above including going to the beginning of the file. (which is: M-< M-x replace-string RET C-q C-m RET C-q C-j RET)
+To stop recording the macro type C-x )
+Give the macro a name by typing: M-x name-last-kbd-macro
+Open your .emacs file: C-x C-f ~/.emacs
+Insert the macro text into the file by typing the following followed by the name you gave the macro above: M-x insert-kbd-macro
+You can bind this to a key combination using a global-set-key definition right under the macro definition.
+Here's what I added to my .emacs file to map C-c m to replacing all the ^M characters in the current buffer:
+
+;;Replace all freakin' ^M chars in the current buffer
+(fset 'replace-ctrlms
+   [escape ?< escape ?% ?\C-q ?\C-m return ?\C-q ?\C-j return ?!])
+(global-set-key "\C-cm" 'replace-ctrlms)
+-------------------------------------------------------------------------
+

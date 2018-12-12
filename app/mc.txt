@@ -1,0 +1,48 @@
+https://linux.die.net/man/1/mc
+http://www.trembath.co.za/mctutorial.html
+
+C-l
+
+repaint all the information in the Midnight Commander.
+
+C-x c
+
+run the Chmod command on a file or on the tagged files.
+
+C-x o
+
+run the Chown command on the current file or on the tagged files.
+
+C-x l
+run the link command.
+
+C-x s
+run the symbolic link command.
+
+C-x i
+set the other panel display mode to information.
+C-x q
+set the other panel display mode to quick view.
+
+C-x !
+execute the External panelize command.
+
+C-x h
+run the add directory to hotlist command.
+
+Alt-!
+executes the Filtered view command, described in the view command.
+
+Alt-?
+executes the Find file command.
+
+Alt-c
+pops up the quick cd dialog.
+
+C-o
+when the program is being run in the Linux or FreeBSD console or under an xterm, it will show you the output of the previous command. When ran on the Linux console, the Midnight Commander uses an external program (cons.saver) to handle saving and restoring of information on the screen.
+
+When the subshell support is compiled in, you can type C-o at any time and you will be taken back to the Midnight Commander main screen, to return to your application just type C-o. If you have an application suspended by using this trick, you won't be able to execute other programs from the Midnight Commander until you terminate the suspended application.
+
+C-x h add directory to hotlist
+C-\ accsess the list
