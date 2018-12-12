@@ -1,3 +1,11 @@
+rescan cli:
+. .bashrc
+source .bashrc
+
+export PATH=/Users/usr1/opt/app1/bin:$PATH
+
+
+
 tldr
 
 
