@@ -1,6 +1,7 @@
 rescan cli:
 . .bashrc
 source .bashrc
+source .bash_profile
 
 export PATH=/Users/usr1/opt/app1/bin:$PATH
 
