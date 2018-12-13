@@ -8,7 +8,8 @@ export PATH=/Users/usr1/opt/app1/bin:$PATH
 recurs:
 mkdir -p
 
-
+insesitivly case + recursivly + only match group:
+grep -iro pattern path
 
 tldr
 
