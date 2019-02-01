@@ -1,8 +1,10 @@
 centos
 awesome
+i3wm
 cherrytree(-)
 tmux
 emacs (speedbar like tree):
+  https://www.emacswiki.org/emacs/NeoTree
   https://www.emacswiki.org/emacs/SrSpeedbar
   https://www.reddit.com/r/emacs/comments/1a1t39/how_do_i_get_dirtree_to_show_ascii_like_in_this/
   https://www.emacswiki.org/emacs/tree-mode.el
