@@ -27,3 +27,9 @@ Ctrl+b x 	— закрыть панель (а можно просто набра
 Ctrl+b PgUp 	— вход в «режим копирования», после чего:
 PgUp, PgDown 	— скроллинг;
 q 		— выход из «режима копирования».
+macos:
+Control+B
+[
+Arrows keys or Shift+Page up/down
+Control+C when done with scrollback
+If you want to change this to behave like every other terminal app on every other platform, you can go to Terminal -> Preferences, Settings, choose your profile and go to Keyboard, and swap the bindings for "page down/page up" and "shift page down/shift page up"
