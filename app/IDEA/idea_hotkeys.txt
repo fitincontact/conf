@@ -1,0 +1,82 @@
+﻿Go to declaration 							F4, Ctrl + B , Ctrl + Click
+Go to implementation(s)						Ctrl + Alt + B
+Go to super-method/super-class				Ctrl + U
+Navigation 									Ctrl + Alt + Left/Right
+Go to next/previous editor tab 				Alt + Right/Left
+Close active editor tab 					Ctrl + F4
+Go to previous/next method					Alt + Up/Down
+Recent files popup 							Ctrl + E
+Tool windows and files						Ctrl + Tab
+Close tool windows							Shift + Esc
+Go back to previous tool window 			F12
+Go to editor (from tool window) 			Esc
+Navigate to last edit location 				Ctrl+ Shift+ Backspace
+Go to line 									Ctrl + G
+Next/previous highlighted error				F2 / Shift + F2
+Find 										Ctrl + Shift + F
+Find All/Classes/Files/Actions				Ctrl + N
+Search everywhere 							Double Shift
+Bookmark									F11, Ctrl + F11/F12
+Select all occurrences						Ctrl + Alt + Shift + J
+Usage										Ctrl + Alt + F7
+Find usages/Find usages in file				Alt + F7 / Ctrl + F7
+Highlight usages in file 					Ctrl + Shift + F7
+Hierarchy									Ctrl + Alt + H
+Type hierarchy								Ctrl + H
+Method hierarchy							Ctrl + Shift + H
+Search everywhere 							Double Shift
+Parameter info 								Ctrl + P
+Open quick definition lookup				Ctrl + Shift + I
+Quick documentation lookup 					Ctrl + Q
+Context info								Alt + Q
+Brief Info									Ctrl + mouse
+Show intention actions and quick-fixes		Alt + Enter
+Reformat code								Ctrl + Alt + L
+Optimize imports 							Ctrl + Alt + O
+Comment/uncomment with line comment			Ctrl + /
+Comment/uncomment with block comment		Ctrl + Shift + /
+Paste from recent buffers... 				Ctrl + Shift + V
+Duplicate current line 						Ctrl + D
+Delete line at caret 						Ctrl + Y
+Refactor this 								Ctrl + Alt + Shift + T
+External Doc 								Shift + F1
+Rename 										Shift + F6
+Show descriptions of error at caret			Ctrl + F1
+Smart code completion 						Ctrl + Shift + Space
+Override methods 							Ctrl + O
+Show intention actions and quick-fixes 		Alt + Enter
+Generate code 								Alt + Ins
+
+Extend selection 							Ctrl + W
+Shrink selection 							Ctrl + Shift + W
+Smart line split 							Ctrl + Enter
+Start new line 								Shift + Enter
+Toggle case									Ctrl + Shift + U
+Select till code block end/start			Ctrl + Shift + ] / [
+Delete to word end 							Ctrl + Delete
+Delete to word start 						Ctrl + Backspace
+Expand/collapse code block					Ctrl + NumPad+ / -
+Expand all 									Ctrl+ Shift+ NumPad+
+Collapse all Ctrl+ Shift+
+
+--Debugging--
+Step over/into								F8/F7
+Smart step into/Step out					Shift + F7/Shift + F8
+Run to cursor 								Alt + F9
+Evaluate expression 						Alt + F8
+Resume program 								F9
+Toggle breakpoint 							Ctrl + F8
+View breakpoints 							Ctrl + Shift + F8
+
+--VCS / Local History--
+Commit project to VCS						Ctrl + K
+Update project from VCS						Ctrl + T
+Push commits								Ctrl + Shift + K
+‘VCS’ quick popup							Alt + BackQuote (`)
+
+--Compile and Run--
+Make project 								Ctrl + F9
+Compile selected file, package or module 	Ctrl + Shift + F9
+Select configuration and run/debug			Alt + Shift + F10/F9
+Run/Debug									Shift + F10 / F9
+Run context configuration from editor		Ctrl + Shift + F10
