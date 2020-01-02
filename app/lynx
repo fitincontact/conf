@@ -1,0 +1,264 @@
+Copying:
+This document was created by Philip Webb as a service to Lynx users.
+It may be copied -- with minor formatting changes -- , provided
+no other changes are made & authorship is clearly acknowledged.
+Any other reproduction constitutes breach of copyright.
+Readers are encouraged to inform the author
+of any apparent errors or omissions.
+
+Introduction:
+This outline is specially for people who are just starting to use Lynx or have used it for some time without exploring its features very far. It answers the sorts of questions everyone asks at first.
+For a more systematic account of Lynx, the Internet & related matters,
+explore the many links on the Main Help Page: to go there, enter `h' .
+You should be aware that there are 3 levels of Lynx user:
+
+Anonymous, who have free access to the Internet
+without a personal password, typically via a library or freenet:
+some Lynx features may not be available to them,
+depending on the system manager;
+Shell accounts, which normally require a password,
+but give users general access to a computer system like UNIX:
+again, the system manager controls some features of Lynx;
+a variation on this is people who use a pre-compiled binary
+& are constrained by the choices of whoever made it;
+Self-compiled, ie people who compile their own Lynx
+in their own PC or in their own directory under eg UNIX:
+they have complete control over how Lynx is configured.
+If you find some features outlined below are not available & you fall into the first 2 groups, you should consult your system manager
+to find out whether their version of Lynx is limited by them;
+if you fall into Group 3, you should check userdefs.h & lynx.cfg
+to see what you need to change. You should also check settings
+in the Options screen, which most users can change (enter `o').
+Contents:
+Moving around the current document
+Using the goto & jump -- `g j' -- commands
+How to escape from things
+Some useful information commands
+The bookmark file
+Options
+Forms & security
+Tables, frames, images, cookies, style sheets
+Character sets
+Grabbing stuff without being interactive
+Creating a WWW page with Lynx
+There's a bug or a crash!
+Which systems does Lynx run on?
+Lynx for the blind and visually impaired
+Who's in charge of Lynx?
+Moving around the current document:
+Simple commands:
+to goto the beginning/end of the document, enter `^a' or `^e' ;
+to move up/down by 1 screen, enter `-' or `Space' ;
+to move up/down by half-a-screen, enter `)' or `(' ;
+to move up/down by 2 lines, enter `^p' or `^n' ;
+no, you can't move the screen just 1 line at a time.
+Numbered links:
+You can number the links in each document:
+enter `o' for Options, then `k' for Keypad Mode.
+If links are numbered, `123' takes you straight to URL [123]:
+ie you can get a document just by entering its link number;
+`123g' simply moves the hilite to link [123]
+without downloading that document;
+`123p' takes you to the top of page 123 in the current document;
+you can also add `+' & `-' to give relative movements:
+eg `7p+' goes down 7 pages & `5-' follows the 5th link above.
+Searching:
+One way to skip around long documents is to search with `/' ;
+enter `n' for the next occurrence of the same string;
+you can recall previous strings with `UpArrow' or `DownArrow' after you have entered `/' & then edit them:
+for line-editor commands, see the Main Help Page.
+No, you can't search backwards using Lynx,
+but Lynx will search again from the beginning of the file
+if there isn't an occurrence ahead of you.
+Using the goto & jump -- `g j' -- commands:
+You can enter any URL following `g':
+Lynx will supply `http://' if you omit it
+& may guess if you omit part of the URL (eg `www.' or `.ca').
+You can recall previous URLs using `UpArrow' or `DownArrow'
+& edit them (see Main Help Page for details of the line editor).
+To access files on your own machine start with `file://localhost', followed by the full path for the file.
+You can use `g' to send e-mail by starting with `mailto:'
+-- no `//' -- ; you can include the current document
+in the e-mail & edit it as you wish.
+You can goto the current directory on your machine by entering `.' following `g': all subdirectories & files are listed as links,
+as is the next-higher directory.
+There is also the jump command `j', which allows you to call URLs
+from a prepared list in your jumpfile; you need to define the file
+in lynx.cfg & add whatever URLs you commonly consult.
+How to escape from things:
+`q' exits Lynx, but prompts first;
+`Q' exits without a prompt; `^d' is an emergency exit;
+`^z' suspends Lynx, going to the original shell:
+in UNIX, `fg' returns to Lynx;
+`!' suspends Lynx, creating a new shell: `exit' returns;
+`z' interrupts a mistaken or slow download.
+Some useful information commands:
+`h' gets you the full range of on-line help files;
+`k' gives a list of keystrokes with their functions;
+`l' lists all the links in the current document.
+`o' goes to the Options list, where you can change settings;
+`V' lists all the documents you have visited in order;
+`^h' lists just those documents you will return to
+with a series of `LeftArrow' commands;
+`=' gives details of the current document & link;
+`g' followed by `lynxmessages:' recalls recent Lynx messages.
+The bottom line of the screen is controlled by an option:
+you probably have it set to Novice, with 2 lines of help;
+you can change it to show the URL of the current link
+by entering `o' & then changing to Advanced Mode.
+If you forget what you defined in lynx.cfg or don't control it,
+you can find out by entering `g' followed by the URL `lynxcfg:' ;
+your binary's compile options are shown by `lynxcompileopts:' .
+The bookmark file:
+`a' adds the current document URL to your bookmark file;
+`v' calls up the bookmark file with its links;
+`r' is supposed to remove bookmarks, but can be cantankerous:
+it is best to use an editor to remove the bookmark line directly;
+NB don't add or alter bookmark-file lines,
+except for simple changes of name or URL;
+it's a good idea to keep a back-up copy of your bookmark file,
+in case some inadvertent error renders it unusable.
+Stefan Caunter has a good account of the multi-bookmarks option.
+Options:
+These are accessed via 'o': a good account is at Stefan Caunter's page
+Forms & security:
+You can use your regular editor in a textarea
+& there are various commands for extending a textarea:
+see Users Guide for details (starting with 2-8-2).
+If you want to enter a regular Lynx command in the middle of a form, enter `^v', which will ask for the command: this also allows you to exit the form by jumping to another part of the document;
+You can access `https' sites using Lynx, but you need SSLeay
+& must compile in SSL patches; there are strict restrictions
+if you live in the USA & looser rules apply if you live in Canada;
+For more detailed help see README.ssl in the Lynx doc directory.
+You can use Lynx with a proxy: see lynx.cfg.
+Tables, frames, images, cookies, style sheets:
+Table rendering has been improved: Lynx 2-8-3dev.14 tests
+if tables are simple enough to allow column-formatting,
+but is still constrained by being a 1-pass browser
+& problems still arise if there are unexpected tags in the table. Tom Zerucha's gawk program is a big help for UNIX users here.
+Frames are fully accessible to Lynx, but are displayed as separate documents, preceded by a document listing them as links: don't be put off by warnings that "Your browser doesn't understand frames: get Notstraight or Exploiter": these should simply be ignored.
+Images can be downloaded using Lynx; you can also compile Lynx
+to use a viewer like xv, if you have the necessary system access.
+Cookies are handled by Lynx:
+for details see lynx.cfg or Stefan Caunter's page;
+the cookie jar can be examined via '^k', which explains what to do with it.
+Style sheets control the appearance of Lynx:
+the basic file is /usr/local/etc/lynx.lss (or a similar location);
+when building Lynx, you can configure with lynx --with-lss=''
+or you can use an empty lynx.lss file; colors can be manipulated via lynx.cfg
+& /usr/local/share/lynx_docs/samples/oldlynx can be used as well.
+Character sets:
+Lynx 2-8 (or later) has good support for multilingual character sets:
+to see 8-bit characters properly,
+enter `o', goto the Display Character Set,
+then fill in the one corresponding to the font
+you really have installed for your terminal;
+if you're not sure, try `7 bit approximation' as the safest.
+You can tell the remote site which characters to use:
+enter `o', then goto Preferred Document Character Set.
+Some documents look broken because they do not specify
+the character set properly: you can complain to the author,
+but if you know what the character set should be,
+enter `o', then choose Assumed Charset from the pop-up list.
+Getting character sets right is quite complex,
+as there are so many variations of server/client/document,
+so you may need to look in the Users' Guide -- `h' --
+or if you have access to it look in lynx.cfg,
+which has a long account of all the alternatives.
+If you want to see the accents on French, German or Spanish words
+e.g. in news stories, it's not too difficult with Kermit,
+which is free (tho' you are encouraged to buy the manual)
+& boasts very powerful translation abilities;
+you must have appropriate versions at both ends of the wire.
+With Lynx character-set ISO-Latin-1 & `transparent' in C-Kermit
+& the ordinary N American codepage 437 in MS-DOS,
+add 2 lines to mskermit.ini:
+
+
+     set display 8-bit
+     set transf char latin1
+   
+The former gives the correct accents within Lynx
+& the latter allows downloading them from UNIX to your PC
+after printing them to a file from Lynx.
+Grabbing stuff without being interactive:
+You can use Lynx on the command line (with shell access):
+eg `lynx http://lynx.browser.org/ >file.d1' (without quotes),
+which will download that URL into that file;
+there are a lot of switches you can use:
+enter `lynx -help >file.d1' to copy the list into a file;
+there's also a very useful utility called wget,
+tho' it is not distributed or supported by Lynx volunteers;
+another useful tool for automating tasks is expect,
+also independent of Lynx & its developers.
+Creating a WWW page with Lynx:
+Lynx makes it easy to build & edit your own WWW documents:
+first, create a skeleton HTML document with an editor;
+call up Lynx with the command `lynx yourfile.html',
+where `yourfile.html' is the skeleton document,
+or enter `g', then `file://localhost/path/to/yourfile.html';
+enter `e' & Lynx will present the source file for editing;
+exit the editor & Lynx will show you the rendered page again.
+You must have the editor specified in lynx.cfg
+& you must call up the document as a local file.
+There's a bug or a crash!
+Lynx is very well tested by real-life users, so bugs are rare.
+If Lynx refuses to start, the problem may be that it can't find
+the start-page for some reason: you can try using a local file
+with the command `lynx file://localhost/FULL/PATH/TO/YOUR/FILE'
+or simply `lynx .' (yes, that's a dot).
+One common problem encountered by beginners is that the version they are using is out-of-date: the Internet & other browsers are continually developing & Lynx tries to keep up, so it is important to use the latest Lynx, if you can: see Who's in charge?
+To find your version number, enter `=' .
+Another common problem is that many sites have bad HTML
+-- are badly written -- , sometimes very bad!
+Lynx tries to do its best to interpret messy HTML
+& you can try the `tagsoup' parser, which can be set with `^v'
+or in the Options page under `HTML error recovery',
+but beginners should probably just accept that some site owners
+are less clever than they think & move on to another site.
+One frequent type of bad HTML is badly formatted comments,
+which can sometimes cause a whole screen or document to be blank: you can change the way Lynx parses comments with " ` " or " ' ".
+You can have a look at the source code for the document using `\', a good way of finding what may be wrong if you understand HTML.
+Which systems does Lynx run on?
+Lynx can be used on UNIX, VMS, Win32, NT, DOS 386,
+OS/2, Mac, Amiga, OS390, BS2000 & Nextstep: however,
+not all systems are equally supported by the volunteer developers;
+for set-up on M$ Windows see Dale Landry;
+for very small computers there is also Bobcat & DosLynx,
+which are not as well supported;
+for more information, see under Who's in charge?
+Lynx for the blind and visually impaired:
+There is a speech-friendly page in the Lynx on-line help.
+Some other sources of information around Lynx and the Internet
+for the blind and visually impaired:
+
+Lloyd Rasmussen;
+Gregory Rosmaita and his site;
+Laura Eaves;
+Kelly Ford.
+All these people are volunteers, who may be too busy
+to answer your inquiries quickly or at all.
+US National Library Service for the Blind & Physically Handicapped
+has some information about Internet resources.
+
+Visually Impaired Computer Users Group
+offers a lot of advice for using Lynx & related software.
+
+There is a list-server blind-l, to which you can subscribe
+by sending the single line `subscribe blind-l' (omit the quotes).
+
+Feel free to ask questions from lynx-dev whenever you wish.
+
+Who's in charge of Lynx?
+Lynx was created c 1994 at the University of Kansas
+& is now distributed under the GPL.
+Today -- February 2007 -- Lynx is maintained by Thomas Dickey.
+For all information about Lynx & how to get the latest version, goto lynx.isc.org & follow the various links from there.
+The developers communicate via the lynx-dev listserver:
+use that link if you want to get in touch with them,
+making sure you give as much detail as you can
+about your problem or suggestion;
+you can subscribe to lynx-dev by sending the single-line message `subscribe lynx-dev' to majordomo.
+you can also visit the lynx-dev Archive.
+Maintained by Philip Webb
+Last updated : 070214
