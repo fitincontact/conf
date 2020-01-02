@@ -1,3 +1,4 @@
+$ emacs -nw
 files, buffers, windows:
 C-x C-f		find-file			Открыть файл на диске
 C-x C-q						read only
